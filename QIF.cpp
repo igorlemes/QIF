@@ -13,7 +13,7 @@
 // Definindo um tipo de dado para a imprimir a precisão
 typedef std::numeric_limits< double > dbl;
 // Definindo um tipo de dado de matriz
-boost::numeric::ublas::matrix<long double> > matriz;
+boost::numeric::ublas::matrix<long double>  matriz;
 
 
 
