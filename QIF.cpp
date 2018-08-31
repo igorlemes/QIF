@@ -19,12 +19,12 @@ std::vector< long double > VETOR;
 
 
  
-bool isChannel( MATRIZ m ){
+bool isChannel(boost::numeric::ublas::matrix< long double > m ){
     long double totalSum = 0;
     int rows = 0;
     for(size_t i = 0; i < m.size1 (); i++){
         totalSum = 0;
-        for (size_t i = 0; i < m.size2(); i++){
+        for (size_t j = 0; j < m.size2(); j++){
             totalSum += m (i, j);
             printf("Iterate\n");
         }
@@ -40,7 +40,7 @@ bool isChannel( MATRIZ m ){
 }
 
 
-bool isDistribution( VETOR numberVector){
+bool isDistribution( std::vector< long double >  numberVector){
     long double totalSum = 0;
     for (size_t i = 0; i < numberVector.size(); i++){
         totalSum += numberVector[i];
@@ -54,7 +54,7 @@ bool isDistribution( VETOR numberVector){
 }
 
 int main(){
-    VETOR probability = {1.0/3.0, 1.0/3.0, 1.0/3.0};
+    std::vector< long double >  probability = {1.0/3.0, 1.0/3.0, 1.0/3.0};
     
     std::cout.precision(dbl::max_digits10);
     
