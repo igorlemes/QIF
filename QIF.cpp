@@ -2,7 +2,19 @@
 #include <vector>
 #include <string>
 #include <array>
+
+// Biblioteca necessária para imprimir a precisão dos long double
 #include <limits>
+
+// Biblioteca para facilitar as operaçoes utilizando matrizes
+#include <boost/numeric/ublas/matrix.hpp>
+#include <boost/numeric/ublas/io.hpp>
+
+// Definindo um tipo de dado para a imprimir a precisão
+typedef std::numeric_limits< double > dbl;
+
+
+
 
 bool isDistribution(std::vector<long double> numberVector){
     long double totalSum = 0;
@@ -19,7 +31,7 @@ bool isDistribution(std::vector<long double> numberVector){
 
 int main(){
     std::vector<long double> probability = {1.0/3.0, 1.0/3.0, 1.0/3.0};
-    typedef std::numeric_limits< double > dbl;
+    
     std::cout.precision(dbl::max_digits10);
     
     std::cout << "Probability 1:" <<  probability[0] << std::fixed << "\tProbability 2:" << probability[1] << std::fixed <<  std::endl;

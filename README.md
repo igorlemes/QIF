@@ -19,7 +19,9 @@ Using your favorite programming language (Python, C, C++), implement a tool that
 4) Given a prior distribution and a value n>=1, compute the probability of guessing correctly within n tries. (Note that when n = 1 this function coincides with Bayes vulnerability).
 5) Given a prior distribution and a gain function, compute the g-vulnerability. 
 (Note that when the g-function is gid, you recover Bayes vulnerability). 
-Posterior measures of information: create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
-Leakage measures
-Given a prior, a channel matrix, and a information function, compute the corresponding additive leakage.
-Given a prior, a channel matrix, and a information function, compute the corresponding multiplicative leakage.
+## Posterior measures of information
+1) create functions that, given a prior and a channel matrix, compute the corresponding posterior information measures as in the items (a)-(e) of item (3) above.
+
+### Leakage measures
+1) Given a prior, a channel matrix, and a information function, compute the corresponding additive leakage.
+2) Given a prior, a channel matrix, and a information function, compute the corresponding multiplicative leakage.
