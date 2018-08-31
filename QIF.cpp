@@ -2,31 +2,27 @@
 #include <vector>
 #include <string>
 #include <array>
+#include <limits>
 
-bool isDistribution(long double numberVector[]){
+bool isDistribution(std::vector<long double> numberVector){
     long double totalSum = 0;
-    int numberElements = sizeof(*numberVector);
-    printf("numberElements1: %i \n", numberElements);
-
-    numberElements = long double(numberElements) / sizeof(long double);
-    printf("numberElements2: %i \n", numberElements);
-    for (size_t i = 0; i < numberElements; i++){
+    for (size_t i = 0; i < numberVector.size(); i++){
         totalSum += numberVector[i];
-        printf("Iterate");
+        printf("Iterate\n");
     }   
-    if (totalSum == 1.000000000000000){
+    if (totalSum <= (long double) 1.0000000000000001 and totalSum >= (long double) 0.9999999999999999){
         return true;
     } else {
         return false;
     }
 }
-int main(){
-    long double probability[3];
-    probability[1] = 1/3;
-    probability[2] = 1/3;
-    probability[3] = 1/3;
 
-    printf("Probability 1: %i, Probabilty 2: %i \n", probability[0], probability[1]);
+int main(){
+    std::vector<long double> probability = {1.0/3.0, 1.0/3.0, 1.0/3.0};
+    typedef std::numeric_limits< double > dbl;
+    std::cout.precision(dbl::max_digits10);
+    
+    std::cout << "Probability 1:" <<  probability[0] << std::fixed << "\tProbability 2:" << probability[1] << std::fixed <<  std::endl;
     if (isDistribution(probability)) {
         printf("Is probability\n");
     } else {
