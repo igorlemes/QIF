@@ -11,7 +11,7 @@ Using your favorite programming language (Python, C, C++), implement a tool that
 4) Print beautifully a channel matrix on the screen.
 ## Update of knowledge using priors and channels
 1) Given a prior and a channel matrix, compute the corresponding joint probability distribution.
-2) Given a prior and a channel matrix, compute the corresponding hyper-distribution (i.e., the set of posterior distributions and the outer distribution on them).
+2) Given a prior and a channel matrix, compute the corresponding hyper-distribution (i.e., the set of posterior distributions and the outer distribution on them). 
 ## Prior measures of information
 1) Given a prior distribution, compute its Shannon entropy.
 2) Given a prior distribution, compute its Guessing entropy.
